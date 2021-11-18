@@ -10,7 +10,7 @@ jobs:
     name: Test pdqhash-python
     strategy:
       matrix:
-        python-version: [3.6]
+        python-version: [3.8]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -40,7 +40,7 @@ jobs:
         fail-fast: false
         matrix:
           python-version:
-            - 3.6
+            - 3.8
           
       steps:
         - uses: actions/checkout@v2
@@ -52,9 +52,9 @@ jobs:
             docker run --rm -v ${{ github.workspace }}:/ws:rw --workdir=/ws \
               arm64v8/ubuntu:20.04 \
               bash -exc 'apt update && \
-              apt install -y python3.6 && \
-              apt install -y python3.6-venv && \
-              python3.6 -m venv .env && \
+              apt install -y python3.8 && \
+              apt install -y python3.8-venv && \
+              python3.8 -m venv .env && \
               source .env/bin/activate && \
               python -m pip install --upgrade pip && \
               apt-get install -y git && \
