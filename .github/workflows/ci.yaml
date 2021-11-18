@@ -61,7 +61,8 @@ jobs:
               python -m pip install --upgrade pip && \
               apt-get install -y git && \
               git submodule init && \
-              git submodule update --remote && \
+              #git submodule update --remote && \
+              git pull --recurse-submodules && \
               pip install pipenv && \
               make init && \
               make test && \
