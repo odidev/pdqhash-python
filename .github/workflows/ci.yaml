@@ -64,7 +64,9 @@ jobs:
               #git submodule update --remote && \
               git pull --recurse-submodules && \
               pip install pipenv && \
-              apt-get install make && \
+              export LC_ALL=C.UTF-8 && \
+              export LANG=C.UTF-8 && \
+              apt-get install -y make && \
               make init && \
               make test && \
               deactivate'     
