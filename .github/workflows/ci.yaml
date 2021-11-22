@@ -67,7 +67,7 @@ jobs:
               apt-get install -y make && \
               export LC_ALL=C.UTF-8 && \
               export LANG=C.UTF-8 && \
-              pip install pylint==2.3.0 && \
+              pip install pylint && \
               make init && \
               make test && \
               deactivate'     
