@@ -64,6 +64,7 @@ jobs:
               #git submodule update --remote && \
               git pull --recurse-submodules && \
               pip install pipenv && \
+              apt-get install make && \
               make init && \
               make test && \
               deactivate'     
